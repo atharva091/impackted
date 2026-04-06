@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ncsu-red: #CC0000;
+  --color-ncsu-dark-red: #990000;
+  --color-ncsu-black: #000000;
+  --color-ncsu-gray: #666666;
+  --color-ncsu-light-gray: #F2F2F2;
+  
+  --font-serif: "Lora", serif;
+  --font-sans: "Lora", serif;
+}
+
+:root {
+  --ncsu-red: #CC0000;
+  --ncsu-black: #000000;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles for the Brachistochrone paths */
+.path-line {
+  fill: none;
+  stroke: #cbd5e1;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.marble {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
